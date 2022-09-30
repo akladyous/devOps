@@ -54,7 +54,7 @@ CREATE TABLE user_profile (
     age smallint CHECK (age BETWEEN 18 AND 118),
 	user_id integer	REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
-INSERT INTO 
+INSERT INTO
 	user_profile
 	(first_name, last_name, age, user_id)
 	VALUES
@@ -79,22 +79,22 @@ INSERT INTO images
     ('htt4://foto_1.png', 3),
     ('http://foto_1.png', 4),
     ('http://foto_1.png', 5),
-    
+
     ('http://foto_2.png', 1),
     ('http://foto_3.png', 1),
     ('http://foto_4.png', 1),
     ('http://foto_5.png', 1),
     ('http://foto_6.png', 1),
-    
+
     ('http://foto_2.png', 2),
     ('http://foto_3.png', 2),
     ('http://foto_4.png', 2),
     ('http://foto_5.png', 2),
-    
+
     ('http://foto_2.png', 3),
     ('http://foto_3.png', 3),
     ('http://foto_4.png', 3),
-    
+
     ('http://foto_2.png', 4),
     ('http://foto_3.png', 4),
 
@@ -120,12 +120,12 @@ INSERT INTO comments
     ('comment 5', 1, 3),
     ('comment 5', 1, 4),
     ('comment 6', 1, 5),
-    
+
     ('comment 1', 2, 1),
     ('comment 2', 2, 3),
     ('comment 3', 2, 4),
     ('comment 4', 2, 5),
-    
+
     ('comment 1', 3, 1),
     ('comment 2', 3, 1),
     ('comment 3', 3, 2),
@@ -133,7 +133,7 @@ INSERT INTO comments
     ('comment 5', 3, 4),
     ('comment 6', 3, 5),
     ('comment 7', 3, 5),
-    
+
     ('comment 1',  4, 1),
     ('comment 2',  4, 1),
     ('comment 3',  4, 1),
