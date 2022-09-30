@@ -43,14 +43,14 @@ FROM users
         where product_id = 3
     ) AS o ON o.user_id = users.id;
 
--- this is equivalent to : 
+-- this is equivalent to :
 SELECT first_name
 FROM users
     join orders ON orders.user_id = users.id
 where orders.product_id = 3;
 
 -- SubQueries in WHERE Clause
-SELECT id 
+SELECT id
 	FROM orders
 	WHERE product_id IN (
 		SELECT id FROM products WHERE price / weight > 50
@@ -62,4 +62,4 @@ SELECT NAME
 	WHERE price > (
 		SELECT AVG(price) FROM products
 	);
-	
+

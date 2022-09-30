@@ -46,23 +46,7 @@ UPDATE users
     where email = 'user2@email.com' AND id = 2
     RETURNING *;
 
-DROP TABLE IF EXISTS user_profile CASCADE;
-CREATE TABLE user_profile (
-    id SERIAL PRIMARY KEY,
-    first_name  varchar(25) NOT NULL,
-    last_name   varchar(25) NOT NULL,
-    age smallint CHECK (age BETWEEN 18 AND 118),
-	user_id integer	REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE
-);
-INSERT INTO
-	user_profile
-	(first_name, last_name, age, user_id)
-	VALUES
-	('marc',   'smith', 30, 1),
-	('alex',   'lopez', 36, 2),
-	('marine', 'droff', 23, 3),
-	('paul',   'marc',  19, 4),
-	('sarah',  'franc', 19, 5);
+
 
 DROP TABLE IF EXISTS images CASCADE;
 CREATE TABLE images (
