@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS user_profile CASCADE;
-CREATE TABLE user_profile (
+DROP TABLE IF EXISTS user_profiles CASCADE;
+CREATE TABLE user_profiles (
     id SERIAL PRIMARY KEY,
     first_name  varchar(25) NOT NULL,
     last_name   varchar(25) NOT NULL,
@@ -8,7 +8,7 @@ CREATE TABLE user_profile (
 	user_id integer	REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 INSERT INTO
-	user_profile
+	user_profiles
 	(first_name, last_name, age, user_id)
 	VALUES
     ('Gerry',  'Dominichelli', trunc( random() * ( 65-18+1 ) + 18 ), trunc( random() * ( 50-1+1 )  + 1 )),
@@ -62,4 +62,4 @@ INSERT INTO
     ('Arnoldo', 'Gettens', trunc( random() * ( 65-18+1 ) + 18 ), trunc( random() * ( 50-1+1 )  + 1 )),
     ('Hilliard', 'Throssell', trunc( random() * ( 65-18+1 ) + 18 ), trunc( random() * ( 50-1+1 )  + 1 ));
 
-SELECT * FROM user_profile;
+SELECT * FROM user_profiles;
