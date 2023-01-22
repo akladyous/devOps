@@ -72,8 +72,8 @@ where price > all (
 	select max(price) from products where department = 'Home'
 );
 -- ---------------------------------------------------------------- 
-select p1.id, p1.name, (
-	select count(id) as num_orders from orders o1 
+explain  select p1.id, p1.name, (
+	select count(*) from orders o1 
     where o1.product_id = p1.id
     group by product_id 
 ) As num_orders
@@ -87,9 +87,25 @@ select truncate(234.1234, 2);
 SELECT CONCAT_WS(' ,','First name','Second name','Last Name');
 SELECT ELT(1, 'Aa', 'Bb', 'Cc', 'Dd');
 select cast(23.343434 as char);
-select length(cast(truncate(23.1005,0) as char ));
-
+select length(cast(truncate(23.1005,0) as char )) ;
+show character set;
+SELECT @@global.time_zone, @@session.time_zone;
+SHOW DATABASES;
 -- ---------------------------------------------------------------- 
+select p.name, o.purchased_at
+from products p
+join orders o on o.product_id = p.id
+where o.purchased_at between (CURDATE() - INTERVAL 1 week ) and CURDATE();
+
+select * from orders where purchased_at between (CURDATE() - INTERVAL 1 MONTH ) and CURDATE();
+select * from orders;
+select CURDATE() - INTERVAL 1 MONTH ;
+-- ---------------------------------------------------------------- 
+select WEEKDAY(NOW()) + 1;
+select dayofmonth('2022-10-09');
+select dayofweek('2022-10-09');
+-- ---------------------------------------------------------------- 
+SET lc_time_names = 'en_US';
 select count(*) from orders where user_id = 1;
 
 (select * from products order by price desc limit 5)
