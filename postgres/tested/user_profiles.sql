@@ -1,11 +1,11 @@
 DROP TABLE IF EXISTS user_profiles CASCADE;
 CREATE TABLE user_profiles (
-    id SERIAL PRIMARY KEY,
-    first_name  varchar(25) NOT NULL,
-    last_name   varchar(25) NOT NULL,
-    age smallint CHECK (age BETWEEN 18 AND 65),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	user_id integer	REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE
+  	id SERIAL PRIMARY KEY,
+  	first_name  varchar(50) NOT NULL,
+  	last_name   varchar(50) NOT NULL,
+	age smallint CHECK (age BETWEEN 18 AND 65),
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	user_id integer REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 INSERT INTO
 	user_profiles
