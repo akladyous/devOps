@@ -4,7 +4,7 @@ create table employees (
 	name varchar(50) not null,
 	month integer not null,
 	salary integer not null,
-    primary key(id)
+  primary key(id)
 );
 
 
