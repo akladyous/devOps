@@ -10,7 +10,7 @@ create table employees (
 
 insert into employees (name, month, salary)
     values
-	('Iva', truncate( (rand() * ( 15-9+1 ) + 9), 0 ), truncate( (rand() * ( 4500-1350+1 ) + 1350), 0 ) ),
+	  ('Iva', truncate( (rand() * ( 15-9+1 ) + 9), 0 ), truncate( (rand() * ( 4500-1350+1 ) + 1350), 0 ) ),
     ('Ignatius', truncate( (rand() * ( 15-9+1 ) + 9), 0 ), truncate( (rand() * ( 4500-1350+1 ) + 1350), 0 ) ),
     ('Jannie', truncate( (rand() * ( 15-9+1 ) + 9), 0 ), truncate( (rand() * ( 4500-1350+1 ) + 1350), 0 ) ),
     ('Neal', truncate( (rand() * ( 15-9+1 ) + 9), 0 ), truncate( (rand() * ( 4500-1350+1 ) + 1350), 0 ) ),
