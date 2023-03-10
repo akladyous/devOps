@@ -1,14 +1,14 @@
-DROP TABLE IF EXISTS addresses CASCADE;
-CREATE TABLE addresses (
-	id SERIAL PRIMARY KEY,
-	user_id INTEGER  REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE,
+DROP TABLE IF EXISTS user_address CASCADE;
+CREATE TABLE user_address (
+	user_address_id SERIAL PRIMARY KEY,
+	user_id INTEGER  REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE,
 	street VARCHAR(100),
 	city VARCHAR(30),
 	zip INTEGER,
 	state VARCHAR(30)
 );
 
-INSERT INTO addresses (user_id, street, city, zip, state)
+INSERT INTO user_address (user_id, street, city, zip, state)
 VALUES
     (1  , '5 farmco plaza', 'petaluma', 44177, 'district of columbia'),
     (2  , '92 northland road', 'ořechov', 90610, 'louisiana'),
@@ -61,4 +61,4 @@ VALUES
     (49 , '1 dunning parkway', 'pontevedra', 73124, 'pennsylvania'),
     (50 , '3506 dahle avenue', 'saint petersburg', 55811, 'michigan');
 
-select * from addresses;
+select * from user_address;

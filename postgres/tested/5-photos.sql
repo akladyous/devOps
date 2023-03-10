@@ -1,8 +1,8 @@
 DROP TABLE IF EXISTS photos CASCADE;
 CREATE TABLE photos (
-    id SERIAL PRIMARY KEY,
+    photo_id SERIAL PRIMARY KEY,
     url VARCHAR(250),
-    user_id INTEGER REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE
+    user_id INTEGER REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 INSERT INTO
@@ -108,3 +108,5 @@ INSERT INTO
         ('http://dummyimage.com/224x100.png/ff4444/ffffff', 31),
         ('http://dummyimage.com/187x100.png/dddddd/000000', 49),
         ('http://dummyimage.com/126x100.png/5fa2dd/ffffff', 12);
+
+select * from photos;
