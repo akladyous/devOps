@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS orders CASCADE;
 
 CREATE TABLE orders (
   order_id SERIAL,
-  user_id INTEGER NOT NULL REFERENCES users(id),
+  user_id INTEGER NOT NULL REFERENCES users(user_id),
   product_id INTEGER,
   paid BOOLEAN,
   purchased_at TIMESTAMP DEFAULT NULL,
