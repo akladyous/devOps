@@ -8,16 +8,16 @@ Sure! Here’s a template for your `README.md` file tailored for a DevOps reposi
 
 
 ## Table of Contents
-- [Introduction](#introduction)
-- [Getting Started](#getting-started)
-- [Architecture](#architecture)
-- [Setup Instructions](#setup-instructions)
-- [Usage](#usage)
-- [CI/CD Pipeline](#cicd-pipeline)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+- Introduction
+- Getting Started
+- Architecture
+- Setup Instructions
+- Usage
+- CI/CD Pipeline
+- Technologies Used
+- Contributing
+- License
+- Contact
 
 ## Introduction
 This repository contains the necessary configurations, scripts, and documentation to support DevOps practices for [Your Project Name]. It aims to automate the deployment, scaling, and management of applications in various environments.
