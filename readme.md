@@ -1,9 +1,11 @@
 Sure! Here’s a template for your `README.md` file tailored for a DevOps repository. Feel free to customize it based on your specific project details.
 
+![DevOps](https://img.shields.io/badge/DevOps-Ready-brightgreen)
+
 ```markdown
 # DevOps Repository
 
-![DevOps](https://img.shields.io/badge/DevOps-Ready-brightgreen)
+
 
 ## Table of Contents
 - [Introduction](#introduction)
