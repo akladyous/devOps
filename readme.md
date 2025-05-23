@@ -6,7 +6,6 @@ Sure! Here’s a template for your `README.md` file tailored for a DevOps reposi
 # DevOps Repository
 
 
-
 ## Table of Contents
 - Introduction
 - Getting Started
